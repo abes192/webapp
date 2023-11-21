@@ -1,0 +1,80 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Team profile cards</title>
+</head>
+<body>
+
+    <div class="card">
+        <div class="card-image">
+            <img src="{{ url_for('static', filename='img/1.jpg') }}" alt="Profile image">
+        </div>
+        <p class="name">Alan Bayu Eka Satria</p>
+        <p>21.83.0648</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
+        <div class="socials">
+            <button class="github"><i class="fab fa-github"></i></button>
+            <button class="twitter"><i class="fab fa-twitter"></i></button>
+            <button class="pinterest"><i class="fab fa-pinterest-p"></i></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-image">
+            <img src="{{ url_for('static', filename='img/2.jpg') }}" alt="Profile image">
+        </div>
+        <p class="name">Ikvan Rahmat Fauzin</p>
+        <p>21.83.0649</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
+        <div class="socials">
+            <button class="github"><i class="fab fa-github"></i></button>
+            <button class="pinterest"><i class="fab fa-pinterest-p"></i></button>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-image">
+            <img src="{{ url_for('static', filename='img/3.jpg') }}" alt="Profile image">
+        </div>
+        <p class="name">Leonsius Faldi Kaum</p>
+        <p>21.83.0671</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
+        <div class="socials">
+            <button class="github"><i class="fab fa-github"></i></button>
+            <button class="twitter"><i class="fab fa-twitter"></i></button>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-image">
+            <img src="{{ url_for('static', filename='img/4.jpg') }}" alt="Profile image">
+        </div>
+        <p class="name">Muchsin</p>
+        <p>21.83.0697</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur delectus, mollitia tenetur libero quam recusandae alias in incidunt.</p>
+        <div class="socials">
+            <button class="github"><i class="fab fa-github"></i></button>
+            <button class="twitter"><i class="fab fa-twitter"></i></button>
+        </div>
+    </div>
+
+    <!-- Form for Contact Submission -->
+    <form action="{{ url_for('contact') }}" method="post">
+        <label for="name">Select a contact:</label>
+        <select name="name" id="name">
+            <option value="Alan Bayu Eka Satria">Alan Bayu Eka Satria</option>
+            <option value="Ikvan Rahmat Fauzin">Ikvan Rahmat Fauzin</option>
+            <option value="Leonsius Faldi Kaum">Leonsius Faldi Kaum</option>
+            <option value="Muchsin">Muchsin</option>
+        </select>
+        <label for="message">Your message:</label>
+        <textarea name="message" id="message" rows="4" required></textarea>
+        <button type="submit">Contact</button>
+    </form>
+
+</body>
+</html>
