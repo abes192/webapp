@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_required, login_user, current_user, logout_user
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://username:password@your-postgres-server.postgres.database.azure.com:5432/your-database'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://zbnbkxzkuj:7D5N6PQ1VJWZW8L1$@klompok3cloud-server.postgres.database.azure.com:5432/klompok3cloud-database'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SECRET_KEY'] = 'your-secret-key'
+app.config['SECRET_KEY'] = 'kelompok3'
 
 db = SQLAlchemy(app)
 
